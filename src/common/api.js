@@ -1,5 +1,5 @@
 export const getBooks = (searchTerm = '') => {
-    let key = 'AIzaSyBr-JtukMPhMIDlYeLf2rK_lVGw3X0x1xg'
+    const key = 'AIzaSyBr-JtukMPhMIDlYeLf2rK_lVGw3X0x1xg'
     const url = `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}&key=${key}`;
     const options = {
       method: 'GET',

@@ -10,7 +10,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchTerm: 'Vonnegut',
+      searchTerm: '',
       filterOption: 'All',
       results: [],
     }
@@ -20,24 +20,22 @@ class App extends Component {
     getBooks(this.state.searchTerm)
       .then(results => {
         this.setState({ results })
+        this.render()
       })
       .catch(err => {
-        // handle your error
+        console.log(err.message)
       })
   }
-
-  componentDidMount() {
-    this.populateBooks();
-  }
-
 
 
   updateSearchTerm(term) {
     this.setState({
       searchTerm: term
+    }, () => {
+      this.populateBooks();
     })
-    this.populateBooks()
   }
+  
 
   updateFilterOption(option) {
     this.setState({
