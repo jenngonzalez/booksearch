@@ -22,7 +22,7 @@ export const getBooks = (searchTerm = '') => {
             title: item.volumeInfo.title,
             author: item.volumeInfo.authors,
             price: item.saleInfo.saleability === 'FOR_SALE' ? item.saleInfo.listPrice.amount : '0.00',
-            description: item.description,
+            description: item.volumeInfo.description,
             cover: item.volumeInfo.imageLinks ? item.volumeInfo.imageLinks.thumbnail : ""
         }))
       )

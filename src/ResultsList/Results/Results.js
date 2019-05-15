@@ -16,7 +16,7 @@ class Results extends Component {
                 <h3>{this.props.author}</h3>
                </div>
                <div className="book-price">
-                <h4>{this.props.price}</h4>
+                <h4>Price: ${this.props.price}</h4>
                </div>
                <div className="book-description">
                 <p>{this.props.description}</p>

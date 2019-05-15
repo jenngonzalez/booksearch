@@ -4,27 +4,13 @@ import ResultsList from './ResultsList/ResultsList';
 import SearchBar from './SearchBar/SearchBar';
 import { getBooks } from './common/api';
 
-// const results = [
-//   {
-//   cover: "Example Cover",
-//   title: "Example Title",
-//   price: "Example Price",
-//   description: "Example Description"
-//   },
-//   {
-//     cover: "Example Cover",
-//     title: "Example Title",
-//     price: "Example Price",
-//     description: "Example Description"
-//   }
-// ];
 
 class App extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      searchTerm: 'Game of Thrones',
+      searchTerm: 'Vonnegut',
       filterOption: 'All',
       results: [],
     }
@@ -44,12 +30,13 @@ class App extends Component {
     this.populateBooks();
   }
 
+
+
   updateSearchTerm(term) {
     this.setState({
       searchTerm: term
     })
-
-    this.populateBooks();
+    this.populateBooks()
   }
 
   updateFilterOption(option) {

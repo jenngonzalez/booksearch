@@ -11,6 +11,7 @@ class SearchBar extends Component {
              <SearchForm
                 searchTerm={this.props.searchTerm}
                 handleUpdate={this.props.handleUpdate}
+                handleSumbit={this.props.handleSubmit}
             />
              <Filters
                 filterOption={this.props.filterOption}
